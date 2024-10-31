@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/booking.css">
+    <title>Reserva</title>
+</head>
+<body>
+    <header id="navbar-container">
+        <nav class="navbar">
+            <div class="logo">
+                  <a href="index.html">
+                      <img src="media/img/LOGO-removebg-preview.png" alt="Paw Paradise logo">
+                  </a>
+            </div>
+            <ul class="navbar-item">
+                <a href="aboutus.html">Sobre Nosotros</a>
+                <a href="services.html">Servicios</a>
+                <a href="reserve.html">Reservar</a>
+                <a href="register.html">Registrarse</a>
+                <a href="login.html">Iniciar Sesión</a>
+                <span id="welcome-message" style="display:none;"></span>
+                <a href="#" id="logout-link" style="display:none;">Cerrar Sesión</a>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="booking-container">
+        <h2>Reserva Paw Paradise</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="nombrePropietario">Nombre del Propietario:</label>
+                <input type="text" id="nombrePropietario" name="nombrePropietario" required>
+            </div>
+            <div class="form-group">
+                <label for="nombrePerro">Nombre del Perro:</label>
+                <input type="text" id="nombrePerro" name="nombrePerro" required>
+            </div>
+            <div class="form-group">
+                <label for="fechaEntrada">Fecha de Entrada:</label>
+                <input type="date" id="fechaEntrada" name="fechaEntrada" required>
+            </div>
+            <div class="form-group">
+                <label for="fechaSalida">Fecha de Salida:</label>
+                <input type="date" id="fechaSalida" name="fechaSalida" required>
+            </div>
+            <div class="form-group">
+                <label for="notas">Notas Adicionales:</label>
+                <textarea id="notas" name="notas" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn">Reservar</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+               <a href="index.html">
+                <img src="media/img/LOGO-removebg-preview.png" alt="Logo de Paw Paradise" class="footer-logo">
+              </a>
+            <div class="footer-text">
+                <p>© 2024 Paw Paradise - Todos los derechos reservados.</p>
+                <p>Visítanos en Escazú, Costa Rica.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
