@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paw Paradise</title>
+    <link rel="shortcut icon" href="media/img/LOGO-removebg-preview.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div class="contenedor">
+        <div class="marquee-container">
+            <div class="marquee-content" aria-live="polite">
+                <p>Tu perro merece lo mejor: ¡bienvenido al lujo canino!</p>
+                <img src="media/img/marq.png" alt="mrq">
+                <p>Cuidado experto, amor incondicional.</p>
+                <img src="media/img/marq2.png" alt="marq2">
+                <p>Cuidado con amor, diversión sin fin.</p>
+                <img src="media/img/dog1.jpg" alt="marq3">
+                <p>Recibe un 10% de descuento en nuestros servicios al registrarte </p>
+            </div>
+       </div>
+        <header id="navbar-container">
+           <nav class="navbar">
+               <div class="logo">
+                     <a href="index.html">
+                         <img src="media/img/LOGO-removebg-preview.png" alt="Paw Paradise logo">
+                     </a>
+               </div>
+               <ul class="navbar-item">
+                   <a href="aboutus.html">Sobre Nosotros</a>
+                   <a href="services.html">Servicios</a>
+                   <a href="booking.html">Reservar</a>
+                   <a href="register.html">Registrarse</a>
+                   <a href="login.html">Iniciar Sesión</a>
+                   <span id="welcome-message" style="display:none;"></span>
+                   <a href="#" id="logout-link" style="display:none;">Cerrar Sesión</a>
+               </ul>
+           </nav>
+       </header>
+
+       <div class="carousel">
+         <div class="carousel-container">
+             <div class="carousel-slide"><img src="media/img/dog8.jpg" alt="dog"></div>
+             <div class="carousel-slide"><img src="media/img/dog9.jpg" alt="dog2"></div>
+             <div class="carousel-slide"><img src="media/img/dog6.jpg" alt="dog3"></div>
+             <div class="carousel-slide"><img src="media/img/dog7.jpg" alt="dog4"></div>
+         </div>
+         <button class="prev" aria-label="Imagen anterior"  onclick="moveSlide(-1)">&#10094;</button>
+         <button class="next" aria-label="Imagen siguiente" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+
+      <section class="about">
+            <div class="about-container">
+                <div class="abt-txt">
+                    <h2>¿Quiénes somos?</h2>
+                    <p>Paw Paradise es el hotel y daycare para perros más acogedor de Escazú, Costa Rica. Diseñado con amor y atención a cada detalle, ofrecemos un ambiente seguro y divertido para que tu peludo disfrute de su tiempo lejos de casa. Con amplias áreas de juego, personal capacitado y actividades diarias, garantizamos que cada visita sea una experiencia inolvidable. Además, nuestra ubicación privilegiada en Escazú permite un fácil acceso para los dueños, asegurando que tu mascota reciba el mejor cuidado mientras tú estás ocupado. En Paw Paradise, cada perro es parte de nuestra familia.</p>
+                </div>
+                <div class="abt-img">
+                    <img src="media/img/marqe1.jpg" alt="dog">
+                </div>
+
+            </div>
+      </section>
+    
+        <section class="services">
+            <h2>Nuestros Servicios</h2>
+            <div class="card-container">
+                <div class="card">
+                    <a href="booking.html">
+                        <img src="media/img/hotel.jpg" alt="hotel">
+                    </a>
+                    <h3>Hotel para Perros</h3>
+                    <p>Ofrecemos un alojamiento cómodo y seguro para que tu mascota se sienta como en casa.</p>
+                </div>
+                <div class="card">
+                    <a href="services.html">
+                        <img src="media/img/grmng.jpg" alt="grooming">
+                    </a>
+                    <h3>Daycare</h3>
+                    <p>Un lugar divertido y seguro donde tu perro puede jugar y socializar durante el día.</p>
+                </div>
+                <div class="card">
+                    <a href="services.html">
+                        <img src="media/img/tranng.jpg" alt="training">
+                    </a>
+                    <h3>Entrenamiento</h3>
+                    <p>Clases de entrenamiento personalizadas para ayudar a tu perro a aprender y desarrollarse.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h2>Visítanos</h2>
+            <div id="map"></div>
+        </section>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script>
+            // Inicializa el mapa
+            const map = L.map('map').setView([9.9333, -84.1353], 14); // Coordenadas de Escazú, Costa Rica
+
+            // Capa de mapa de OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Marcador para Paw Paradise
+            const marker = L.marker([9.9333, -84.1353]).addTo(map);
+            marker.bindPopup('<b>Paw Paradise</b>').openPopup();
+        </script>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+               <a href="index.html">
+                <img src="media/img/LOGO-removebg-preview.png" alt="Logo de Paw Paradise" class="footer-logo">
+              </a>
+            <div class="footer-text">
+                <p>© 2024 Paw Paradise - Todos los derechos reservados.</p>
+                <p>Visítanos en Escazú, Costa Rica.</p>
+            </div>
+        </div>
+    </footer>
+ <script src="js/script.js"></script>
+</body>
+</html>
