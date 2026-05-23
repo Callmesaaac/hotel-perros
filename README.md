@@ -1,2 +1,3 @@
-# hotel-perros
-Proyecto hotel perros Isaac Martinez 10-2
+# Hotel Perros
+Ecommerce con Html, css y javascript
+Reservas, ubicacion, servicios
